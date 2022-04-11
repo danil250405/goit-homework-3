@@ -1,0 +1,308 @@
+
+/* Палитра цветов
+Accent #2196F3
+title color #212121
+Secondary color #757575
+white #FFFFFF
+second bg color #E5E5E5
+third bg color #2F303A
+mail tel color rgba(255, 255, 255, 0.6)
+bgcolor button portfolio #F5F4FA
+
+
+*/
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root{
+    --primary-text-color: #212121;
+    --Secondary-text-color:#757575;
+    --white: #FFFFFF;
+    --second-bgcolor: #E5E5E5;
+    --third-bgcolor: #2F303A;
+    --mail-tel-color: rgba(255, 255, 255, 0.6);
+    --accent-color: #2196F3;
+    --button-bgcolor: #F5F4FA;
+
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+        color: var(--primary-text-color);
+/* Шапка */
+}
+.logo-header, .logo-footer{
+        color: var(--primary-text-color);
+        font-family: Raleway, sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+}
+.logo-decor{
+    color: var(--accent-color)
+}
+
+.nav-link, .nav-communication {
+    color: var(--primary-text-color);
+
+font-weight: 500;
+
+line-height: 1.14;
+letter-spacing: 0.02em;
+}
+.current{
+    color: var(--accent-color)
+}
+.header ul :hover, .header ul :focus{
+    color: var(--accent-color)
+}
+.nav-communication{
+
+    color: var(--Secondary-text-color);
+  
+    font-weight: 500;
+
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+/* Main index */
+main{
+    background-color: var(--second-bgcolor);
+}
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 0 15px;
+}
+
+.hero{
+    background-color: var(--third-bgcolor);
+    padding: 200px 0;
+}
+.hero-title {
+    color: var(--white);
+
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    
+    margin-bottom: 30px;
+}
+.hero-button{
+    background-color: var(--accent-color);
+    color: var(--white);
+
+      
+    font-family: Roboto,
+    sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    margin-left: auto;
+    margin-right: auto ;
+    
+    display: block;
+}
+.feature-list-title{
+color: var(--primary-text-color);
+
+    font-weight: 700;
+   
+    line-height: 1.14;
+    }
+
+.feature-info{
+    margin-top: 10px;
+    color: var(--Secondary-text-color);
+
+}
+.lessons-titile, .team-title{
+    color: var(--primary-text-color) ;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+margin-bottom: 50px;
+}
+
+.list-item-worker{
+    background: var(--white);
+    /* material shadow v1 */
+    
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+.team-name{
+    color: var(--primary-text-color);
+font-weight: 500;
+font-size: 16px;
+line-height: 1.19;
+
+}
+.name-info{
+    color: var(--Secondary-text-color);
+    font-size: 16px;
+    line-height: 1.19;
+    margin-top: 10px;
+}
+.name-info-container{
+    margin-top: 30px;
+}
+/* footer */
+.footer{
+    background-color: var(--third-bgcolor);
+    padding: 60px 0;
+}
+.logo-footer{
+    color: var(--white);
+}
+.adress{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+.adress-offline{
+    margin-top: 20px;
+    color: var(--white);
+}
+.adress-online{
+    margin-top: 9px;
+    color: var(--mail-tel-color);
+}
+/* main portfolio */
+.search-btn{
+    border: none;
+    background-color: var(--button-bgcolor);
+    background: #F5F4FA;
+    border-radius: 4px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+
+    padding: 6px 22px;
+}
+.search-btn:hover, .search-btn:focus{
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+.portfolio-card{
+    background-color: var(--white);
+}
+.list-portfolio{
+   
+}
+.card-title{
+    color: var(--primary-text-color);
+ 
+    font-size: 18px;
+    line-height: 2.00;
+    letter-spacing: 0.06em;
+
+    margin-top: 20px;
+}
+.card-info{
+    color: var(--Secondary-text-color);
+
+    font-size: 16px;
+    line-height: 1.88;
+
+    margin-top: 4px;
+}
