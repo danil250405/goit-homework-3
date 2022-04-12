@@ -20,8 +20,8 @@ bgcolor button portfolio #F5F4FA
 }
 
 /* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+ul,
+ol {
     padding: 0;
 }
 
@@ -32,8 +32,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -107,47 +107,86 @@ a{
 }
 
 body{
+    color: var(--primary-text-color);
+
     font-size: 14px;
     font-family: Roboto, sans-serif;
     line-height: 1.71;
     letter-spacing: 0.03em;
-        color: var(--primary-text-color);
+        
 /* Шапка */
 }
 .logo-header, .logo-footer{
         color: var(--primary-text-color);
+
         font-family: Raleway, sans-serif;
         font-weight: 700;
         font-size: 26px;
         line-height: 1.19;
+
+
+    }
+    .logo-header{
+        margin-right: 93px;
+    }
+.header-nav{
+    display: flex;
+
 }
 .logo-decor{
     color: var(--accent-color)
 }
-
-.nav-link, .nav-communication {
-    color: var(--primary-text-color);
-
-font-weight: 500;
-
-line-height: 1.14;
-letter-spacing: 0.02em;
+.nav{
+    display: flex;
+    align-items: center;
 }
+/* .nav-list .nav-link:not(:last-child){
+    margin-left: 50px;
+} */
+.nav-list{
+    display: flex;
+
+}
+.nav-link, .nav-communication{
+    color: var(--primary-text-color);
+    
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    display: block;
+    padding: 32px 0;   
+
+}
+
 .current{
     color: var(--accent-color)
 }
 .header ul :hover, .header ul :focus{
     color: var(--accent-color)
 }
-.nav-communication{
+.cotacts-list {
+    display: flex;
+margin-left: auto;
 
+  
+}
+.nav-communication{
     color: var(--Secondary-text-color);
   
     font-weight: 500;
-
     line-height: 1.14;
     letter-spacing: 0.02em;
+
 }
+
+.nav-list li:not(:first-child) {
+    margin-left: 50px;
+}
+.cotacts-list li+li{
+    margin-left: 50px;
+}
+
 /* Main index */
 main{
     background-color: var(--second-bgcolor);
@@ -159,7 +198,12 @@ main{
     
     padding: 0 15px;
 }
-
+.our-lessons, .our-team, .portfolio{
+    padding: 94px 0;
+}
+.our-feathers{
+    padding-top: 94px;
+}
 .hero{
     background-color: var(--third-bgcolor);
     padding: 200px 0;
@@ -194,47 +238,74 @@ main{
     
     display: block;
 }
+.feature-list{
+    display: flex;
+
+}
+.feature-list li:not(:last-child){
+  margin-right: 30px;
+}
 .feature-list-title{
-color: var(--primary-text-color);
+    color: var(--primary-text-color);
 
     font-weight: 700;
-   
     line-height: 1.14;
     }
 
 .feature-info{
-    margin-top: 10px;
     color: var(--Secondary-text-color);
+
+    margin-top: 10px;
 
 }
 .lessons-titile, .team-title{
     color: var(--primary-text-color) ;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
-margin-bottom: 50px;
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.lessons-list{
+    display: flex;
+}
+.lessons-list li:not(:last-child){
+    margin-right: 30px;
+}
+.list-item-worker:not(:last-child){
+    margin-right: 30px;
 }
 
 .list-item-worker{
-    background: var(--white);
-    /* material shadow v1 */
-    
+    background: var(--white);   
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
     border-radius: 0px 0px 4px 4px;
+}
+.team-list{
+    display: flex;
 }
 .team-name{
     color: var(--primary-text-color);
-font-weight: 500;
-font-size: 16px;
-line-height: 1.19;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
 
 }
 .name-info{
     color: var(--Secondary-text-color);
+
     font-size: 16px;
     line-height: 1.19;
+    text-align: center;
+
     margin-top: 10px;
 }
 .name-info-container{
@@ -243,6 +314,7 @@ line-height: 1.19;
 /* footer */
 .footer{
     background-color: var(--third-bgcolor);
+
     padding: 60px 0;
 }
 .logo-footer{
@@ -256,14 +328,27 @@ line-height: 1.19;
     line-height: 1.71;
 }
 .adress-offline{
-    margin-top: 20px;
     color: var(--white);
+
+    margin-top: 20px;
 }
 .adress-online{
-    margin-top: 9px;
     color: var(--mail-tel-color);
+
+    margin-top: 9px;
 }
+
+
+
 /* main portfolio */
+.list-search{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.list-search li:not(:last-child){
+    margin-right: 8px;
+}
 .search-btn{
     border: none;
     background-color: var(--button-bgcolor);
@@ -285,8 +370,22 @@ line-height: 1.19;
 }
 .portfolio-card{
     background-color: var(--white);
+    
+    width: calc((100% - 60px) / 3);
+    border: 1px solid #EEEEEE;
+   
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.portfolio-card:nth-child(3n){
+    margin-right: 0;
+}
+.portfolio-card:nth-last-child(-n+3){
+    margin-bottom: 0;
 }
 .list-portfolio{
+    display: flex;
+    flex-wrap: wrap;
    
 }
 .card-title{
